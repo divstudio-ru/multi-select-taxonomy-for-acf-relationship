@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Multi-Select Taxonomy for ACF Relationship 1.0.16\n"
+"Report-Msgid-Bugs-To: https://github.com/divstudio-ru/multi-select-taxonomy-for-acf-relationship/issues\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"PO-Revision-Date: 2026-08-28 00:00+0000\n"
+"Last-Translator: div STUDIO <hello@div.studio>\n"
+"Language-Team: German\n"
+"X-Domain: multi-select-taxonomy-for-acf-relationship\n"
+
+#: multi-select-taxonomy-for-acf-relationship.php:78
+msgid "Requires Advanced Custom Fields (free or Pro) to be installed and activated."
+msgstr "Erfordert, dass Advanced Custom Fields (kostenlos oder Pro) installiert und aktiviert ist."
+
+#: multi-select-taxonomy-for-acf-relationship.php:84
+msgid "Please <a href=\"%s\">install and activate Advanced Custom Fields</a> first."
+msgstr "Bitte <a href=\"%s\">installieren und aktivieren Sie zuerst Advanced Custom Fields</a>."
+
+#: multi-select-taxonomy-for-acf-relationship.php:165
+msgid "Select taxonomies..."
+msgstr "Taxonomien auswählen..."
+
+#: multi-select-taxonomy-for-acf-relationship.php:343
+msgid "ACF Field Groups"
+msgstr "ACF-Feldgruppen"
+

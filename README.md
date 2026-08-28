@@ -55,7 +55,7 @@ See [readme.txt](readme.txt) for the full version history.
 
 ## License
 
-GPL v2 or later. See [LICENSE](https://www.gnu.org/licenses/gpl-2.0.html).
+GPL v2.1. See [LICENSE](https://www.tldrlegal.com/license/gnu-lesser-general-public-license-v2-1-lgpl-2-1).
 
 ## Credits
 

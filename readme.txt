@@ -4,7 +4,7 @@ Tags: acf, advanced custom fields, relationship field, multiselect, taxonomy fil
 Requires at least: 5.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.16
+Stable tag: 1.0.17
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Author URI: https://div.studio
@@ -22,6 +22,16 @@ By default, ACF's Relationship field lets an editor filter related posts by only
 * Selecting terms from **different** taxonomies (e.g. Year = 2007 and Month = February) matches posts that satisfy *both* conditions at once.
 
 == Changelog ==
+
+= 1.0.17 =
+* Fixed: "Add Row" did nothing in a Repeater (or Flexible Content) whose
+  rows contain a Relationship field with the taxonomy filter. The new row
+  is cloned from ACF's hidden template row, whose filter was already
+  enhanced; the copy kept Select2's class but not its instance, and
+  calling select2('destroy') on it threw an error that aborted ACF's
+  "append" action. The script now checks for a real Select2 instance and
+  only strips leftover markup from such copies.
+* The exposed ACFRelMultiselectEnhancer.version now matches the plugin version.
 
 = 1.0.16 =
 * Updated the Plugin URI (and the translation files' bug-report link) to

@@ -3,7 +3,7 @@
  * Plugin Name: Multi-Select Taxonomy for ACF Relationship
  * Plugin URI: https://github.com/divstudio-ru/multi-select-taxonomy-for-acf-relationship
  * Description: Add-on for Advanced Custom Fields (Free or Pro) - Enables multi-select taxonomy filtering in Relationship fields. Allows editors to select multiple taxonomy terms simultaneously when filtering related posts, matching the capabilities available in Field Group settings.
- * Version: 1.0.16
+ * Version: 1.0.17
  * Author: div STUDIO
  * Author URI: https://div.studio
  * License: GPL v2 or later
@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Define plugin constants
  */
-define( 'ACF_REL_MULTISELECT_VERSION', '1.0.16' );
+define( 'ACF_REL_MULTISELECT_VERSION', '1.0.17' );
 define( 'ACF_REL_MULTISELECT_PATH', plugin_dir_path( __FILE__ ) );
 define( 'ACF_REL_MULTISELECT_URL', plugin_dir_url( __FILE__ ) );
 define( 'ACF_REL_MULTISELECT_BASENAME', plugin_basename( __FILE__ ) );

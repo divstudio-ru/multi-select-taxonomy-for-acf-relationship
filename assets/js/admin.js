@@ -12,7 +12,7 @@
  * needs to know how to read multiple taxonomy[] values.
  *
  * @package acf-rel-multiselect
- * @version 1.0.16
+ * @version 1.0.17
  */
 
 (function($) {
@@ -62,8 +62,22 @@
 		// our DOM edits happen while an old Select2 instance is still
 		// "watching" the element and caching stale internal state, which can
 		// leave the placeholder not showing even though the value is empty.
-		if ($select.hasClass('select2-hidden-accessible')) {
+		//
+		// Check for a real Select2 instance, not just its CSS class. When ACF
+		// adds a Repeater / Flexible Content row it clones a hidden template
+		// row whose filter we have already enhanced: ACF strips the Select2
+		// container from the copy, but the select keeps the
+		// "select2-hidden-accessible" class and attributes, while the
+		// instance itself (jQuery data) is not cloned. Calling
+		// select2('destroy') on such a copy throws a TypeError, which aborted
+		// ACF's "append" action - the "Add Row" button did nothing.
+		if ($select.data('select2')) {
 			$select.select2('destroy');
+		} else if ($select.hasClass('select2-hidden-accessible')) {
+			$select
+				.removeClass('select2-hidden-accessible')
+				.removeAttr('data-select2-id aria-hidden tabindex');
+			$select.next('.select2-container').remove();
 		}
 
 		// Add the multiple attribute FIRST, before touching the options.
@@ -209,7 +223,7 @@
 	window.ACFRelMultiselectEnhancer = {
 		enhance: enhanceTaxonomyFilter,
 		initAll: initializeMultiSelectFilter,
-		version: '1.0.14'
+		version: '1.0.17'
 	};
 
 })(jQuery);
